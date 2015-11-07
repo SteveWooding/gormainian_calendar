@@ -1,0 +1,47 @@
+.gorman-image {
+    height: 508px;
+    background: url('http://www.avalonuk.com/wp-content/uploads/2015/03/Dave-Gorman-crop-1026x508.jpg') center / cover;
+}
+
+#result {
+    font-size: 24px;
+   /* text-align: center; */
+    color: #ff5252;
+     margin-bottom: 24px;
+}
+
+#result p {
+    color: #000000;
+    font-size: 16px;
+
+}
+
+#input {
+    text-align: center;
+    font-size: 16px;
+}
+
+#input input {
+    font-size: 16px;
+}
+
+.mdl-card .mdl-card__supporting-text {
+  margin: 40px;
+  flex-grow: 1;
+  padding: 0;
+  color: inherit;
+  width: calc(100% - 80px);
+}
+
+section.section--center {
+  max-width: 860px;
+}
+
+.mdl-mini-footer {
+    margin-top: 48px;
+}
+
+.mdl-layout-title {
+    text-align: center;
+    font-size: 26px;
+}
