@@ -1,21 +1,141 @@
-<html>
+<!doctype html>
+
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gormanian Calendar Converter</title>
     <link href="css/jquery-ui.css" rel="stylesheet">
     <script src="js/jQuery.js"></script>
     <script src="js/jquery-ui.js"></script>
 
-</head>
-<body>
-    <h1>Gormanian Calendar Converter</h1>
-    <p>
-      Input Date: <input type="text" id="datepicker">
-      <button onClick="convert()">Convert</button>
-    </p>
-    <div id="result">
+    <!-- MDL -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="mdl/material.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 
+</head>
+
+<body class="mdl-color--grey-100 mdl-base">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet">
+                        <!-- Title -->
+                        <span class="mdl-layout-title">Gormanian Calendar Converter</span>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Links</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="http://uktvplay.uktv.co.uk/shows/dave-gormans-modern-life-is-goodish/watch-online/?video=4557208837001">Watch Modern Life is Goodish (S3E7)</a>
+                <a class="mdl-navigation__link" href="http://www.davegorman.com/">Dave Gorman Homepage</a>
+                <a class="mdl-navigation__link" href="https://en.wikipedia.org/wiki/Calendar">Wikipedia Calendar Article</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"></div>
+                    <div class="mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet gorman-image">
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"></div>
+                </div>
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet"></div>
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet">
+                        <p id="input">
+
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <b>Input Date:</b>
+                                <input class="mdl-textfield__input" type="text" id="datepicker">
+                            </div>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onClick="convert()">Convert</button>
+                        </p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-tablet"></div>
+                </div>
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col"></div>
+                    <div class="mdl-cell mdl-cell--6-col" id="result"></div>
+                    <div class="mdl-cell mdl-cell--2-col"></div>
+                </div>
+                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+
+                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                        <div class="mdl-card__supporting-text">
+                            <h4>About the Gormanian calendar</h4>
+                            <p>The Gormanian calendar system was devised by Dave Gorman in episode 7
+                                of series 3 of his TV show <strong>Modern Life is Goodish</strong>.
+                                You can watch it <a href="http://uktvplay.uktv.co.uk/shows/dave-gormans-modern-life-is-goodish/watch-online/?video=4557208837001">here</a>.</p>
+                            <p>The basic concept is that every month should be exactly 4 weeks long.
+                                So 28 days for every month. This then requires an extra month to be
+                                inserted into the year. This extra month is called Gormanuary.</p>
+                            <p>Another problem with the Gregorian calendar is the Romans. Things
+                                that start with sep- oct- nov- and dec- typically refer to 7, 8,
+                                9, 10. For example, an octopus has 8 legs. So why are the months
+                                September, October, November and December, 9th, 10th, 11th and
+                                12th in the year? Because the Romans inserted a couple of months
+                                named after a general (Julius Caeasr) and an Emperor (Augustus).
+                                Well it's more complicated than that. Go read it up on <a href="https://en.wikipedia.org/wiki/Calendar">Wikipedia</a>.</p>
+                            <p>So the solution is to start the year with March, making the 7th
+                                month of the year September and the 10th month of the year December.
+                                So that's that problem sorted.</p>
+                            <p>OK, so 13 months of 28 days each adds up to 364 days. So we are a tad
+                                short of the 365 days in a year (366 days in leap year). So we would
+                                have an <strong>Intermission</strong> period to fill in the gap.</p>
+                            <p>If the Gormanian calendar were implemented, the first day of the year
+                                would always be a Sunday and so the same day in a month would be the
+                                same day of the week, making life so much more simple.</p>
+                            <p>For reference, here is the 13 month Gormanian calendar:</p>
+                            <ol>
+                                <li><strong>March</strong></li>
+                                <li><strong>April</strong></li>
+                                <li><strong>May</strong></li>
+                                <li><strong>June</strong></li>
+                                <li><strong>Quintilis</strong> <small>original Latin name</small></li>
+                                <li><strong>Sextilis</strong> <small>original Latin name</small></li>
+                                <li><strong>September</strong></li>
+                                <li><strong>October</strong></li>
+                                <li><strong>November</strong></li>
+                                <li><strong>December</strong></li>
+                                <li><strong>January</strong></li>
+                                <li><strong>February</strong></li>
+                                <li><strong>Gormanuary</strong></li>
+                            </ol>
+                            <ul>
+                                <li><strong>Intermission</strong></li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </section>
+                <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">Website by</div>
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="https://www.twitter.com/EmpireSteve">Steven Wooding</a></li>
+                    </ul>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <div class="mdl-logo">Concept by</div>
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="https://twitter.com/DaveGorman">Dave Gorman</a></li>
+                    </ul>
+                </div>
+            </footer>
+            </div>
+
+        </main>
     </div>
-<script src="js/gorCalConvert.js"></script>
+    <script src="js/gorCalConvert.js"></script>
+    <script src="mdl/material.min.js"></script>
 </body>
+
 </html>
