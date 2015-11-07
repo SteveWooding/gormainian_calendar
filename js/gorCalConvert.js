@@ -81,5 +81,5 @@ function convert() {
         gormanDate = gormanDay.toString() + ' ' + gormanMonths[gormanMonth] + ' ' + yearNum.toString();
     }
 
-    $('#result').text(gormanDate);
+    $('#result').html("<p><b>Gormanian Date:</b></p>" + gormanDate);
 }
