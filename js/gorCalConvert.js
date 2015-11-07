@@ -75,10 +75,27 @@ function convert() {
         gormanMonth -= 1;
     }
 
+    // Set the date modifier
+    var dateMod = 'th';
+    switch (gormanDay) {
+        case 1:
+        case 21:
+            dateMod = 'st';
+            break;
+        case 2:
+        case 22:
+            dateMod = 'nd';
+            break;
+        case 3:
+        case 23:
+            dateMod = 'rd';
+            break;
+    }
+
     // Set the Gorman date string
     var gormanDate = 'Intermission';
     if (nthDay < 365) {
-        gormanDate = gormanDay.toString() + ' ' + gormanMonths[gormanMonth] + ' ' + yearNum.toString();
+        gormanDate = gormanDay.toString() + dateMod + ' ' + gormanMonths[gormanMonth] + ' ' + yearNum.toString();
     }
 
     $('#result').html("<p><b>Gormanian Date:</b></p>" + gormanDate);
