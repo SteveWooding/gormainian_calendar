@@ -1,5 +1,5 @@
 .gorman-image {
-    height: 508px;
+    height: 4in;
     background: url('http://www.avalonuk.com/wp-content/uploads/2015/03/Dave-Gorman-crop-1026x508.jpg') center / cover;
 }
 
@@ -41,7 +41,9 @@ section.section--center {
     margin-top: 48px;
 }
 
+/*
 .mdl-layout-title {
     text-align: center;
     font-size: 26px;
 }
+*/
