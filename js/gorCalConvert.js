@@ -92,10 +92,18 @@ function convert() {
             break;
     }
 
+    // Calculate the Gormanian day of the week
+    var daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var gormanDayOfWeekNum = nthDay % 7 - 1;
+    if (gormanDayOfWeekNum == -1) {
+        gormanDayOfWeekNum = 6
+    }
+
     // Set the Gorman date string
     var gormanDate = 'Intermission';
     if (nthDay < 365) {
-        gormanDate = gormanDay.toString() + dateMod + ' ' + gormanMonths[gormanMonth] + ' ' + yearNum.toString();
+        gormanDate = daysOfTheWeek[gormanDayOfWeekNum] + ', ' + gormanDay.toString() +
+                     dateMod + ' ' + gormanMonths[gormanMonth] + ' ' + yearNum.toString();
     }
 
     $('#result').html("<p><b>Gormanian Date:</b></p>" + gormanDate);
