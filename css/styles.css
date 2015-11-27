@@ -1,3 +1,14 @@
+h1 {
+    text-align: center;
+}
+
+@media screen and (max-device-width: 480px) {
+    h1 {
+        font-size: 48px;
+        margin-bottom: 0px;
+    }
+}
+
 .gorman-image {
     height: 4in;
     background: url('http://www.avalonuk.com/wp-content/uploads/2015/03/Dave-Gorman-crop-1026x508.jpg') center / cover;
